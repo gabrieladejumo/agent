@@ -15,9 +15,9 @@ RETURN
     SELECT CONCAT(
            'Product: ',        product_name, ', ',
            'SKU: ',            sku, ', ',
-           'In Stock: ',      stock_quantity, ' units, ',
-           'Warehouse: ',     warehouse, ', ',
-           'Next Restock',    restock_date
+           'In Stock: ',       stock_quantity, ' units, ',
+           'Warehouse: ',      warehouse, ', ',
+           'Next Restock',     restock_date
     )
     FROM IDENTIFIER('inventory')
     WHERE LOWER(product_name)  LIKE LOWER(CONCAT('%',input_product_name, '%'))
